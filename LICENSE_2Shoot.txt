@@ -1,0 +1,102 @@
+2Shoot Dual Intervalometer & ISO Bracketing – Proprietary Freeware License
+Version 1.0.0 Portable
+Copyright © 2026 Cristoforo Bonissone
+All rights reserved.
+
+1. SOFTWARE
+-----------
+2Shoot Dual Intervalometer & ISO Bracketing is a proprietary freeware application developed by Cristoforo Bonissone.
+
+The software is provided free of charge for personal and professional use, subject to the terms of this license.
+
+2. PERMITTED USE
+----------------
+You may:
+- install and use 2Shoot Dual Intervalometer & ISO Bracketing on one or more compatible Windows computers;
+- use 2Shoot Dual Intervalometer & ISO Bracketing for personal, commercial, photographic, technical, or professional activities;
+- make backup copies of the unmodified software for your own use.
+
+3. RESTRICTIONS
+---------------
+You may not, without prior written permission from the copyright holder:
+- sell, rent, lease, sublicense, or commercially redistribute 2Shoot;
+- modify, adapt, translate, reverse engineer, decompile, or disassemble the software, except where such restriction is expressly prohibited by applicable law;
+- redistribute modified versions of 2Shoot;
+- remove, alter, or obscure copyright notices, author information, trademarks, version information, or other proprietary notices;
+- claim authorship or ownership of 2Shoot Dual Intervalometer & ISO Bracketing or any substantial part of it.
+
+4. REDISTRIBUTION
+-----------------
+Redistribution of the original, unmodified 2Shoot package is permitted only when:
+- the software is distributed free of charge;
+- this LICENSE.txt file remains included and unchanged;
+- all copyright and author information remains intact;
+- no fee is charged specifically for the software itself.
+
+Any other redistribution requires prior written permission from the copyright holder.
+
+5. THIRD-PARTY COMPONENTS
+-------------------------
+2Shoot Dual Intervalometer & ISO Bracketing uses and/or interfaces with third-party components, including the Sony Camera Remote SDK and related native libraries.
+
+Those third-party components are not licensed under this license.
+
+Sony, Sony α1, Sony α7 IV, ILCE-1, ILCE-7M4, Sony Camera Remote SDK, and related names and trademarks are the property of their respective owners.
+
+2Shoot Dual Intervalometer & ISO Bracketing is an independent software project and is not an official Sony product.
+
+Any third-party libraries, SDK components, drivers, runtimes, or redistributable files included with or required by 2Shoot remain subject to their own respective license terms.
+
+6. NO WARRANTY
+--------------
+2Shoot Dual Intervalometer & ISO Bracketing is provided "AS IS", without warranty of any kind, express or implied.
+
+To the maximum extent permitted by applicable law, the author makes no warranties regarding:
+- fitness for a particular purpose;
+- merchantability;
+- compatibility;
+- uninterrupted or error-free operation;
+- camera behavior;
+- data integrity;
+- file transfer reliability;
+- future compatibility with Sony cameras, firmware, Windows, or the Sony Camera Remote SDK.
+
+Use of the software is entirely at the user's own risk.
+
+7. LIMITATION OF LIABILITY
+--------------------------
+To the maximum extent permitted by applicable law, the author shall not be liable for any direct, indirect, incidental, special, consequential, or other damages arising from the use of, or inability to use, 2Shoot Dual Intervalometer & ISO Bracketing.
+
+This includes, without limitation:
+- loss of photographs or files;
+- missed shots;
+- camera or computer malfunction;
+- data loss;
+- business interruption;
+- loss of income;
+- loss of opportunity;
+- hardware or software incompatibility.
+
+8. UPDATES AND SUPPORT
+----------------------
+The author is under no obligation to provide updates, maintenance, technical support, compatibility updates, or future versions.
+
+Any updates or new releases may be subject to revised license terms.
+
+9. TERMINATION
+--------------
+This license terminates automatically if you violate any of its terms.
+
+Upon termination, you must stop using and distributing 2Shoot and delete any copies that violate this license.
+
+10. CONTACT
+-----------
+Author: Cristoforo Bonissone
+Email: spc@dacris.it
+Website: www.dacris.it
+
+11. COPYRIGHT
+-------------
+2Shoot Dual Intervalometer & ISO Bracketing
+Copyright © 2026 Cristoforo Bonissone
+All rights reserved.

@@ -1,0 +1,526 @@
+2Shoot Dual Intervalometer & ISO Bracketing
+for Sony α1 / α7 IV and MS Windows
+
+USER GUIDE
+==========
+
+Author: Cristoforo Bonissone
+Copyright © 2026 Cristoforo Bonissone
+Email: spc@dacris.it
+Web: www.dacris.it
+
+
+1. INTRODUCTION
+---------------
+2Shoot Dual Intervalometer & ISO Bracketingis a Windows application designed to remotely control supported Sony cameras over Wi-Fi.
+
+The application provides two main shooting tools:
+
+• Intervalometer
+• ISO Bracketing
+
+Supported cameras:
+
+• Sony α1 (ILCE-1)
+• Sony α7 IV (ILCE-7M4)
+
+2Shoot Dual Intervalometer & ISO Bracketing is an independent software project and is not an official Sony product.
+
+
+2. SYSTEM REQUIREMENTS
+----------------------
+Operating system:
+
+• Microsoft Windows 64-bit
+
+Required camera connection:
+
+• Wi-Fi remote shooting enabled on the camera
+• Camera and PC reachable on the same network, according to the Sony remote shooting configuration
+
+2Shoot Dual Intervalometer & ISO Bracketing uses the Sony Camera Remote SDK and native Sony libraries supplied with the application package.
+
+
+3. STARTING 2SHOOT
+------------------
+Run:
+
+2Shoot.exe
+
+The main window contains:
+
+• Intervalometer
+• ISO Bracketing
+
+The top menu provides:
+
+• File
+• Enumerate
+• Camera Model
+• Disconnect
+• About
+• Help
+
+
+4. CAMERA ENUMERATION
+---------------------
+Use Enumerate to search for supported Sony cameras.
+
+During enumeration:
+
+• Camera Model is temporarily disabled
+• 2Shoot Dual Intervalometer & ISO Bracketing waits until enumeration is fully completed
+• a Windows system sound is played when cameras are successfully detected
+
+If no camera is found, verify the Wi-Fi and Remote Shooting settings on the camera.
+
+
+5. SELECTING AND CONNECTING A CAMERA
+------------------------------------
+Open:
+
+Camera Model
+
+Then select:
+
+• Sony α1 (ILCE-1)
+or
+• Sony α7 IV (ILCE-7M4)
+
+The connection starts automatically.
+
+For both supported cameras, 2Shoot can perform up to three connection attempts:
+
+• first attempt
+• retry 1
+• retry 2
+
+A Windows system sound is played when the connection succeeds.
+
+The connection dialog also contains:
+
+Abort Connection
+
+Use it if the wrong camera was selected or if you want to stop the connection attempt.
+
+
+6. SONY α1 CONFIGURATION
+------------------------
+Typical remote shooting configuration:
+
+• Remote Shooting: ON
+• Connect without Pairing: Enable
+• Access Authentication: OFF
+
+Close Sony RemoteCli or any other application that is already controlling the camera before starting 2Shoot.
+
+
+7. SONY α7 IV CONFIGURATION
+---------------------------
+For Wi-Fi pairing, open on the camera:
+
+Network
+> Cnct./Remote Shoot
+> Remote Shoot Function
+> Pairing
+
+Select Pairing and leave the pairing screen visible while 2Shoot searches for the camera.
+
+If pairing needs to be enabled again, switching Remote Shoot Function OFF and then ON can make the Pairing option available again.
+
+Close Sony RemoteCli or any other application that is already controlling the camera before starting 2Shoot.
+
+
+8. INTERVALOMETER
+-----------------
+The Intervalometer is used for timed shooting sequences.
+
+Available modes:
+
+• Interval Mode
+• Duration Mode
+
+
+8.1 INTERVAL MODE
+-----------------
+Interval Mode defines the time between consecutive shots.
+
+Time settings use 0.5-second increments.
+
+Example:
+
+10 shots
+Interval: 5.0 seconds
+
+2Shoot Dual Intervalometer & ISO Bracketing takes one shot every 5 seconds.
+
+
+8.2 DURATION MODE
+-----------------
+Duration Mode distributes the selected number of shots over a total duration.
+
+The first shot is taken at the beginning of the sequence and the last shot is taken at the end of the selected total duration.
+
+Example:
+
+10 shots
+Total Time: 90 seconds
+
+2Shoot Dual Intervalometer & ISO Bracketing automatically calculates the required spacing between shots.
+
+
+8.3 FILE TYPE
+-------------
+Depending on the selected camera configuration, the Intervalometer can work with:
+
+• RAW
+• RAW + JPG
+• JPG
+
+
+8.4 AUTOFOCUS
+-------------
+Available focus modes:
+
+• AF
+• MF
+
+When AF is selected, 2Shoot performs the required autofocus/shutter sequence.
+
+When MF is selected, the camera is expected to be manually focused.
+
+
+8.5 SHUTTER SPEED AND TIMING
+----------------------------
+2Shoot Dual Intervalometer & ISO Bracketing reads the actual shutter speed from the camera.
+
+Before starting a sequence, the application checks whether the requested interval is compatible with:
+
+• shutter duration
+• autofocus time
+• camera processing time
+
+If the requested timing is too short, 2Shoot reports a more practical minimum value.
+
+
+8.6 SAVE FOLDER
+---------------
+When START is pressed, 2Shoot asks for the destination folder.
+
+After a sequence completes successfully:
+
+• the files are transferred to the selected folder
+• 2Shoot Dual Intervalometer & ISO Bracketing waits approximately 2.5 seconds
+• the destination folder is then opened automatically in Windows Explorer
+
+If the sequence is stopped or fails, the folder is not opened automatically.
+
+
+9. ISO BRACKETING
+-----------------
+ISO Bracketing creates a sequence of photographs at different ISO values while keeping:
+
+• shutter speed unchanged
+• aperture unchanged
+
+The current camera ISO is used as the center value of the bracket.
+
+
+9.1 NUMBER OF SHOTS
+-------------------
+Available sequences:
+
+• 3 shots
+• 5 shots
+• 9 shots
+
+
+9.2 BRACKET STEP
+----------------
+Available ISO steps:
+
+• 0.3 EV
+• 0.7 EV
+• 1.0 EV
+
+
+9.3 ISO RANGE
+-------------
+Minimum ISO used by the 2Shoot bracketing table:
+
+ISO 100
+
+Values below ISO 100 are not used by the bracket sequence.
+
+
+9.4 ISO SEQUENCE ORDER
+----------------------
+The sequence is always executed from the lower ISO value to the higher ISO value.
+
+Example:
+
+Base ISO: 1600
+Shots: 9
+Step: 1.0 EV
+
+Sequence:
+
+100
+200
+400
+800
+1600
+3200
+6400
+12800
+25600
+
+The center value is the ISO originally set on the camera.
+
+
+9.5 LIVE ISO SCALE
+------------------
+The lower status bar displays the calculated ISO bracket sequence in real time.
+
+The central ISO value is shown in bold.
+
+The scale automatically changes when:
+
+• the camera ISO changes
+• the number of shots changes
+• the EV step changes
+
+
+9.6 CAMERA STATUS
+-----------------
+The upper status bar displays:
+
+• Camera
+• ISO
+• Shutter
+• Aperture
+
+The information is refreshed while the controller is idle.
+
+
+9.7 AUTOFOCUS BEFORE THE SEQUENCE
+---------------------------------
+If the camera is in AF mode:
+
+• 2Shoot Dual Intervalometer & ISO Bracketing sends an initial autofocus pulse
+• autofocus is held for approximately 500 ms
+• 2Shoot Dual Intervalometer & ISO Bracketing waits approximately 0.7 seconds before starting the bracket sequence
+
+If the camera is in MF mode, the autofocus pulse is skipped.
+
+
+9.8 ISO BRACKETING TIMING
+-------------------------
+For each ISO value, the sequence is approximately:
+
+1. Set the new ISO
+2. Wait 1.0 second
+3. Take the photograph
+4. Wait for capture confirmation
+5. Wait 2.0 seconds before the next ISO value
+
+Capture confirmation timeout:
+
+5 seconds
+
+
+9.9 ISO SETTING RETRIES
+-----------------------
+If an ISO value is not accepted immediately, 2Shoot can retry.
+
+Maximum attempts:
+
+• first attempt
+• retry 1
+• retry 2
+
+
+9.10 RESTORING THE ORIGINAL ISO
+-------------------------------
+At the end of the bracket sequence, 2Shoot restores the original camera ISO.
+
+The same retry logic is used if necessary.
+
+The original ISO is also restored after STOP or an error whenever possible.
+
+
+9.11 SAVE FOLDER
+----------------
+When START is pressed, 2Shoot asks for the destination folder.
+
+After a successful sequence:
+
+• the files are transferred
+• the original ISO is restored
+• 2Shoot waits approximately 2.5 seconds
+• the destination folder is opened automatically
+
+The folder is not opened after STOP or an unsuccessful sequence.
+
+
+10. STOPPING A SEQUENCE
+-----------------------
+Use STOP to cancel the active shooting sequence.
+
+2Shoot Dual Intervalometer & ISO Bracketing attempts to leave the camera in a safe state.
+
+During ISO Bracketing, the original ISO is restored whenever possible.
+
+
+11. DISCONNECT
+--------------
+Use Disconnect to close the active camera connection.
+
+After disconnection:
+
+• Intervalometer is disabled
+• ISO Bracketing is disabled
+
+Select a camera again from Camera Model to reconnect.
+
+
+12. PORTABLE VERSION
+--------------------
+2Shoot can be distributed as a portable Windows application.
+
+The portable folder normally contains:
+
+• 2Shoot.exe
+• SonyCameraBridge.dll
+• Cr_Core.dll
+• Cr_PTP_IP.dll
+• Cr_PTP_USB.dll
+• libssh2.dll
+• libusb-1.0.dll
+• monitor_protocol.dll
+• monitor_protocol_pf.dll
+• CrAdapter folder
+
+Do not remove the native Sony libraries unless you know they are no longer required.
+
+2Shoot Dual Intervalometer & ISO Bracketing does not require installation when distributed as the prepared portable package.
+
+
+13. TROUBLESHOOTING
+-------------------
+
+13.1 CAMERA NOT FOUND
+---------------------
+Check:
+
+• Remote Shooting is enabled
+• camera Wi-Fi is active
+• camera and PC are correctly connected
+• no other Sony remote-control software is using the camera
+• the correct camera model is selected
+
+
+13.2 CONNECTION FAILED
+----------------------
+2Shoot automatically retries the connection up to two additional times.
+
+If it still fails:
+
+• disconnect/reconnect camera Wi-Fi
+• verify remote shooting settings
+• restart the camera
+• restart 2Shoot Dual Intervalometer & ISO Bracketing
+
+
+13.3 SONY α7 IV PAIRING PROBLEM
+-------------------------------
+Return to:
+
+Network
+> Cnct./Remote Shoot
+> Remote Shoot Function
+> Pairing
+
+Leave the pairing screen open while 2Shoot searches.
+
+
+13.4 SONYCAMERABRIDGE.DLL ERROR
+-------------------------------
+If Windows reports:
+
+Unable to load DLL 'SonyCameraBridge.dll'
+or one of its dependencies
+
+verify that the portable folder contains:
+
+• SonyCameraBridge.dll
+• Cr_Core.dll
+• Cr_PTP_IP.dll
+• Cr_PTP_USB.dll
+• libssh2.dll
+• libusb-1.0.dll
+• monitor_protocol.dll
+• monitor_protocol_pf.dll
+• CrAdapter folder
+
+
+13.5 OTHER SOFTWARE
+-------------------
+Do not run Sony RemoteCli or another application that controls the same camera at the same time as 2Shoot Dual Intervalometer & ISO Bracketing.
+
+
+14. IMPORTANT NOTES
+-------------------
+Camera behavior can vary depending on:
+
+• camera firmware
+• lens
+• autofocus performance
+• image format
+• memory card performance
+• Wi-Fi quality
+• Sony Camera Remote SDK version
+
+Always test important shooting configurations before using them in critical work.
+
+
+15. LICENSE
+-----------
+2Shoot Dual Intervalometer & ISO Bracketing is proprietary freeware.
+
+It is not open-source software.
+
+See the included:
+
+LICENSE_2Shoot.txt
+
+for complete license terms.
+
+
+16. THIRD-PARTY COMPONENTS
+--------------------------
+2Shoot Dual Intervalometer & ISO Bracketing uses and/or interfaces with the Sony Camera Remote SDK and related native libraries.
+
+Sony and related product names and trademarks belong to their respective owners.
+
+2Shoot Dual Intervalometer & ISO Bracketing is an independent software project and is not an official Sony product.
+
+
+17. CONTACT
+-----------
+Cristoforo Bonissone
+
+Email:
+spc@dacris.it
+
+Web:
+www.dacris.it
+
+
+18. COPYRIGHT
+-------------
+2Shoot Dual Intervalometer & ISO Bracketing
+for Sony α1 / α7 IV and MS Windows
+
+Copyright © 2026 Cristoforo Bonissone
+All rights reserved.
